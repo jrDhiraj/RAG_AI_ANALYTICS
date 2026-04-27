@@ -7,11 +7,12 @@ import seaborn as sns
 
 st.title("AI ANALYTICS")
 
-import streamlit as st
-
 pages = [
+
     st.Page(r"main\\utils\\home\\home_page.py", title="Description", icon="🏠"),
-    st.Page(r"main\\utils\\stats\\stats_page.py", title="Statistics", icon="📊"),
+    st.Page(r"main\\utils\\stats\\stats_page.py", title="Statistics", icon="📏"),
+    st.Page(r"main\\utils\\charts\\chartsutils.py", title = "charts ", icon = "📊"),
+    st.Page(r"main\\AI\\aiui.py", title="AI chart", icon = "🤖")
 
 ]
 pg = st.navigation(pages, position="top")

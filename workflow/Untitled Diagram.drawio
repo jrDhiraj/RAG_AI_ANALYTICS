@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="UG7J3OqiV8AO2NrcInYP">
-        <mxGraphModel dx="679" dy="1663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFC2C2" math="0" shadow="0">
+        <mxGraphModel dx="746" dy="1550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFC2C2" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -49,10 +49,10 @@
                 <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="ZqY9vkLhb1oKqC-GyoQ2-16" target="ZqY9vkLhb1oKqC-GyoQ2-18" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-16" value="AI INTIGRATION :&amp;nbsp;&lt;div&gt;TAKE CHARTS AND STATISTICS, COLUMNS , DATA DESCRIPTION (NUMERICAL, CATEGORICAL) ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="360" y="370" width="285" height="125" as="geometry"/>
+                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-16" value="AI INTIGRATION :&amp;nbsp;&lt;div&gt;TAKE STATISTICS, COLUMNS , DATA DESCRIPTION (NUMERICAL, CATEGORICAL) ,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="488" width="285" height="125" as="geometry"/>
                 </mxCell>
-                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" target="ZqY9vkLhb1oKqC-GyoQ2-16" edge="1">
+                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.551;entryY=0.021;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;entryPerimeter=0;" parent="1" target="2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="510" y="310" as="sourcePoint"/>
                         <mxPoint x="560" y="260" as="targetPoint"/>
@@ -60,6 +60,15 @@
                 </mxCell>
                 <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-18" value="AI RETURN&amp;nbsp;&lt;div&gt;DECISION BASED ON INPUT&amp;nbsp;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="180" y="390" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;b style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;input:- PROMPT&lt;/b&gt;&lt;div&gt;&lt;b&gt;desc, stats, head_of_df&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;curveFitting=1;jiggle=2;glass=0;shadow=0;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="360" width="230" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="endArrow=classic;html=1;entryX=0.473;entryY=-0.024;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" target="ZqY9vkLhb1oKqC-GyoQ2-16">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="509" y="440" as="sourcePoint"/>
+                        <mxPoint x="410" y="430" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>

@@ -3,3 +3,4 @@ numpy
 matplotlib
 seaborn
 
+langchain-text-splitters
