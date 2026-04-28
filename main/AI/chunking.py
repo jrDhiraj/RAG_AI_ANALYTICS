@@ -1,11 +1,13 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from documents import documents
 
-def chunking_docs(documents):
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-    if documents is not None
-
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=0)
-        texts = text_splitter.split_text(documents)
-
-        return texts
+def chunking_docs(text):
+    if text:
+        splitter = RecursiveCharacterTextSplitter(
+            chunk_size=300,
+            chunk_overlap=50
+        )
+        return splitter.split_text(text)
+    return []

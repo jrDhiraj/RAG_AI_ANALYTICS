@@ -3,4 +3,8 @@ numpy
 matplotlib
 seaborn
 
-langchain-text-splitters
+streamlit
+langchain
+langchain-huggingface
+sentence-transformers
+faiss-cpu
