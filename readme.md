@@ -6,7 +6,10 @@ THIS PROJECT IS BUILD TO SOLVE THE MANUAL DATA ANALYTICS WORKS
 IN THIS PROJECT USER CAN UPLOAD THE CSV FILE AND OBSERVE THE DESCRIPTIONS ON DATA , STATISTICS OF THE DATA AND  CHARTS ALSO.
 
 ## Features
+<<<<<<< HEAD
 
+=======
+>>>>>>> 146bc70b287bc7b6f7dfec3374cce3a3509f7ddd
 - Upload CSV dataset  
 - Automatic data description  
 - Statistical insights (p-value based)  
@@ -14,12 +17,19 @@ IN THIS PROJECT USER CAN UPLOAD THE CSV FILE AND OBSERVE THE DESCRIPTIONS ON DAT
 - AI-powered analysis using Gemini  
 
 ## AI Capabilities
+<<<<<<< HEAD
 
 - Converts data into insights  
 - Generates business decisions  
 - RAG-based chatbot for data queries  
 
 
+=======
+- Converts data into insights  
+- Generates business decisions  
+- RAG-based chatbot for data queries
+  
+>>>>>>> 146bc70b287bc7b6f7dfec3374cce3a3509f7ddd
 #### USED TECH 
 - numpy
 - pandas 
@@ -47,7 +57,7 @@ IN THIS PROJECT USER CAN UPLOAD THE CSV FILE AND OBSERVE THE DESCRIPTIONS ON DAT
 ![alt text](IMAGE/image2.png)
 
 #### INSTALLATION 
-    git clone (paste hare my repo link)
+    git clone https://github.com/jrDhiraj/RAG_AI_ANALYTICS
     cd AI_ANALYTICS
     pip install -r requirments.txt
 
