@@ -3,7 +3,6 @@ numpy
 matplotlib
 seaborn
 chardet 
-
 streamlit
 langchain
 langchain-huggingface
