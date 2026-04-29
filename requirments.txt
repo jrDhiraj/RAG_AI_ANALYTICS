@@ -8,3 +8,5 @@ langchain
 langchain-huggingface
 sentence-transformers
 faiss-cpu
+langchain[google-genai]
+langchain-google-genai

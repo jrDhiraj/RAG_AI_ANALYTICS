@@ -10,7 +10,6 @@ with st.expander("See data description"):
     def dataset_description(df):
         st.write("Dataframe shape")
         df_shape = df.shape
-        documents['df_shape'] = df_shape
         st.write(df_shape)
         st.space()
 
@@ -54,19 +53,13 @@ with st.expander("See data description"):
         return df_shape,df_description,categorical_description,info_str,df_isnull,df_isduplicats
 
 
-    try:
+    df = load_df()
 
-        df = load_df()
-        if df is None:
-            st.write("upload dataset")
-        else:
-            # df = pd.read_csv(df)
-            st.toast("Dataset upload sucessfully")
-            st.dataframe(df, width="stretch")
-            dataset_description(df)
-    except:
-        ValueError
+    if df is not None:
+        st.dataframe(df.head())
+        dataset_description(df)
+    else:
+        st.warning("Please upload data from sidebar")
 
 
-# with st.expander("see charts"):
-#     st.write("chart is given")
+

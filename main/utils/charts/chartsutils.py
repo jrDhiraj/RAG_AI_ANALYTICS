@@ -7,7 +7,7 @@ from main.utils.stats.stats_page import categorical_df, select_target
 from load_df import load_df
 
 
-with st.expander("📊 Data Visualization Dashboard", expanded=True):
+with st.expander(" Data Visualization Dashboard", expanded=True):
 
     col1, col2 = st.columns(2)
 
@@ -124,10 +124,10 @@ with st.expander("📊 Data Visualization Dashboard", expanded=True):
         except Exception as e:
             st.error(f"Error in charts function: {e}")
 
-
     df = load_df()
 
-    if df is not None and not df.empty:
+    if df is not None:
+        st.dataframe(df.head())
         charts(df)
     else:
-        st.error("❌ DataFrame not loaded properly")
+        st.warning("Please upload data from sidebar")

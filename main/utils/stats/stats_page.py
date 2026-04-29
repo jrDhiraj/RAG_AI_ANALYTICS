@@ -2,6 +2,7 @@ from load_df import load_df
 import streamlit as st
 import pandas as pd
 from scipy.stats import chi2_contingency, ttest_ind
+from main.utils.insights.insights_generator import generate_insights
 from  documents import documents
 
 
@@ -9,12 +10,13 @@ with st.expander("📊 Statistical Insights", expanded=True):
 
     def select_target(df):
         target_col = st.selectbox("Select the target column:", options=df.columns)
-        documents['target_col'] = target_col
         
         y = df[target_col]
         X = df.drop(columns=[target_col])
+
         documents['dataframe_X'] = X.head(5)
         documents['dataframe_y'] = y.head(5)
+
         return X, y, target_col
 
 
@@ -25,7 +27,7 @@ with st.expander("📊 Statistical Insights", expanded=True):
 
 
     def categorical_stats(X, y, target_col):
-        st.subheader("📌 Categorical Insights")
+        st.subheader("Categorical Insights")
 
         st.write("Target distribution:")
         st.bar_chart(y.value_counts())
@@ -51,7 +53,15 @@ with st.expander("📊 Statistical Insights", expanded=True):
                     else:
                         st.info(f"{col} → Not significant")
 
+                    grouped = temp_df.groupby(col)[target_col].mean()
+
                     st.write(temp_df.groupby(col)[target_col].mean())
+
+                    documents['Groupby_categorical'] = f"""
+                        For feature '{col}', the average target value for each category is:
+                        {grouped.to_dict()}.
+                        This shows how '{col}' influences the target variable.
+                        """
                     st.divider()
 
                 else:
@@ -59,12 +69,11 @@ with st.expander("📊 Statistical Insights", expanded=True):
 
             except Exception as e:
                 st.error(f"{col} error: {e}")
-        documents['categorical stats'] = results
         return results
 
 
     def numerical_stats(X, y, target_col):
-        st.subheader("📌 Numerical Insights")
+        st.subheader(" Numerical Insights")
 
         _, num_df = categorical_df(X)
 
@@ -102,6 +111,15 @@ with st.expander("📊 Statistical Insights", expanded=True):
                         st.info(f"{col} → Not significant")
 
                     st.write(temp_df.groupby(target_col)[col].mean())
+                    grouped  = temp_df.groupby(target_col)[col].mean()
+
+                    documents['Groupby_numerical'] = f"""
+
+                        For feature '{col}', the average target value for each category is:
+                        {grouped.to_dict()}.
+                        This shows how '{col}' influences the target variable.
+                        """
+
                     st.divider()
 
                 else:
@@ -109,12 +127,11 @@ with st.expander("📊 Statistical Insights", expanded=True):
 
             except Exception as e:
                 st.error(f"{col} error: {e}")
-        documents['categorical stats'] = results
         return results
 
 
     def show_top_features(cat_results, num_results):
-        st.subheader("🏆 Top Important Features")
+        st.subheader("Top Important Features")
 
         all_results = cat_results + num_results
 
@@ -127,11 +144,11 @@ with st.expander("📊 Statistical Insights", expanded=True):
         for col, p in sorted_feats[:5]:
             st.write(f"{col} → p-value: {p:.5f}")
         
-            documents['Top feature '] = [col,p]
+            
 
 
     def stats_of_data(df):
-        st.subheader("📊 Statistical Measurements")
+        st.subheader("Statistical Measurements")
 
         X, y, target_col = select_target(df)
 
@@ -140,10 +157,15 @@ with st.expander("📊 Statistical Insights", expanded=True):
 
         show_top_features(cat_results, num_results)
 
+        insights = generate_insights(df, X, y, target_col, cat_results, num_results)
+
+        documents["insights :- "] = insights
 
     df = load_df()
 
-    if df is not None and not df.empty:
+    if df is not None:
+        st.dataframe(df.head())
         stats_of_data(df)
+
     else:
-        st.error("❌ DataFrame not found")
+        st.warning("Please upload data from sidebar")

@@ -1,11 +1,4 @@
-import pandas as pd
+import streamlit as st
 
 def load_df():
-    
-    # df = st.file_uploader("upload dataset in CSV formate", type="csv")
-    df = pd.read_csv("synthetic_premium_dataset.csv")
-
-    if df is not None:
-        return df
-
-
+    return st.session_state.get("df", None)
