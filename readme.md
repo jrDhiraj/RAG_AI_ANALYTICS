@@ -15,24 +15,24 @@ IN THIS PROJECT USER CAN UPLOAD THE CSV FILE AND OBSERVE THE DESCRIPTIONS ON DAT
 - google LLM - google_genai:gemini-2.5-flash-lite
 
 #### FILE STRUCTURE 
-![alt text](IMAGE\image.png)
+![alt text](IMAGE/image.png)
 
 #### FEATURES OF PROJECTS 
-![alt text](IMAGE\imagecopy.png)
-![alt text](IMAGE\imagecopy1.png)
-![alt text](IMAGE\imagecopy2.png)
-![alt text](IMAGE\imagecopy3.png)
-![alt text](IMAGE\imagecopy4.png)
-![alt text](IMAGE\imagecopy5.png)
-![alt text](IMAGE\imagecopy6.png)
-![alt text](IMAGE\imagecopy7.png)
+![alt text](IMAGE/imagecopy.png)
+![alt text](IMAGE/imagecopy1.png)
+![alt text](IMAGE/imagecopy2.png)
+![alt text](IMAGE/imagecopy3.png)
+![alt text](IMAGE/imagecopy4.png)
+![alt text](IMAGE/imagecopy5.png)
+![alt text](IMAGE/imagecopy6.png)
+![alt text](IMAGE/imagecopy7.png)
 
 
 #### WORKING FLOW 
-![alt text](IMAGE\image2.png)
+![alt text](IMAGE/image2.png)
 
 #### INSTALLATION 
-    git clone (paste hare my repo link)
+    git clone https://github.com/jrDhiraj/RAG_AI_ANALYTICS
     cd AI_ANALYTICS
     pip install -r requirments.txt
 
