@@ -5,6 +5,18 @@ THIS PROJECT IS BUILD TO SOLVE THE MANUAL DATA ANALYTICS WORKS
 
 IN THIS PROJECT USER CAN UPLOAD THE CSV FILE AND OBSERVE THE DESCRIPTIONS ON DATA , STATISTICS OF THE DATA AND  CHARTS ALSO.
 
+## Features
+- Upload CSV dataset  
+- Automatic data description  
+- Statistical insights (p-value based)  
+- Interactive charts  
+- AI-powered analysis using Gemini  
+
+## AI Capabilities
+- Converts data into insights  
+- Generates business decisions  
+- RAG-based chatbot for data queries
+  
 #### USED TECH 
 - numpy
 - pandas 
