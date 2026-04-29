@@ -39,7 +39,7 @@ def aiui():
 
     if query and st.session_state.db:
 
-        st.write("🔍 Searching...")
+        st.write(" Searching...")
 
         docs = st.session_state.db.similarity_search(query, k=3)
 

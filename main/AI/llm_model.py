@@ -1,10 +1,11 @@
 import os
 from langchain.chat_models import init_chat_model
+import streamlit as st
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDF4XopkFon8b_mXfvsUEqADW3bySgX3PU"
-
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 def build_prompt(query, docs):
+    
     context = "\n\n".join([d.page_content for d in docs])
 
     return f"""

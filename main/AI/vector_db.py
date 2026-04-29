@@ -1,6 +1,6 @@
 from langchain_community.vectorstores import FAISS
-import streamlit as st
 from main.AI.embedings import load_embedding_model
+from main.AI.chunking import chunking_docs
 
 def create_vector_db(chunks):
     if not chunks:

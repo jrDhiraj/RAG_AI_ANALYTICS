@@ -44,7 +44,7 @@ IN THIS PROJECT USER CAN UPLOAD THE CSV FILE AND OBSERVE THE DESCRIPTIONS ON DAT
 
 
 #### WORKING FLOW 
-![alt text](IMAGE\image2.png)
+![alt text](IMAGE/image2.png)
 
 #### INSTALLATION 
     git clone (paste hare my repo link)
