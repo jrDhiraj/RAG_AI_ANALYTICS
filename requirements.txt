@@ -13,3 +13,4 @@ langchain-google-genai
 torchvision
 google-generativeai
 langchain_text_splitters
+langchain_community
