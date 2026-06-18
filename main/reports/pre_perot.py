@@ -33,6 +33,7 @@ Sections:
 7. Feature Importance
 8. Key Insights
 9. Recommendations
+10. Dashboard kpi
 10. Conclusion
 
 Rules:
