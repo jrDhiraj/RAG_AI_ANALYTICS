@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="UG7J3OqiV8AO2NrcInYP">
-        <mxGraphModel dx="1242" dy="1820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFC2C2" math="0" shadow="0">
+        <mxGraphModel dx="987" dy="1918" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFC2C2" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -20,7 +20,7 @@
                         <mxPoint x="310" y="240" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="4" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;shadow=0;" edge="1" parent="1" source="ZqY9vkLhb1oKqC-GyoQ2-5" target="5">
+                <mxCell id="4" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;shadow=0;" parent="1" source="ZqY9vkLhb1oKqC-GyoQ2-5" target="5" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="680" y="90" as="targetPoint"/>
                     </mxGeometry>
@@ -28,11 +28,11 @@
                 <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-5" value="GENERATE&lt;div&gt;CARTS AND INSIGHTS&lt;/div&gt;" style="whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="320" y="60" width="170" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-7" value="&lt;b&gt;&lt;sub&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;STEP TO BULD&amp;nbsp;&lt;/font&gt;&lt;/sub&gt;&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="50" y="160" width="550" height="50" as="geometry"/>
+                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-7" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;WORKFLOW&lt;/b&gt;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="160" width="780" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-9" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;AI DATA ANALYTICS&amp;nbsp;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="50" y="-30" width="550" height="30" as="geometry"/>
+                <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-9" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;AUTO ML LAB&lt;/font&gt;&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="-30" width="780" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="ZqY9vkLhb1oKqC-GyoQ2-10" target="ZqY9vkLhb1oKqC-GyoQ2-11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -47,6 +47,9 @@
                 </mxCell>
                 <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-11" value="&lt;div&gt;SHOW&amp;nbsp;&lt;/div&gt;&lt;div&gt;HEAD&lt;/div&gt;&lt;div&gt;DESCRIBE&lt;/div&gt;&lt;div&gt;MISSING VALUE&amp;nbsp;&lt;/div&gt;&lt;div&gt;DUPLICATES&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=none;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="250" y="240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="ZqY9vkLhb1oKqC-GyoQ2-15" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="ZqY9vkLhb1oKqC-GyoQ2-15" value="SHOW :&amp;nbsp;&lt;div&gt;CHARTS&amp;nbsp;&lt;/div&gt;&lt;div&gt;CORREALTION&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="480" y="240" width="120" height="100" as="geometry"/>
@@ -75,8 +78,17 @@
                         <mxPoint x="410" y="430" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="5" value="GENERATE DECISION USING AI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                <mxCell id="7" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="GENERATE DECISION USING AI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="520" y="40" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="TRAIN MODEL" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="TRAIN MODEL&amp;nbsp;&lt;div&gt;ACCORDING TO DATASET&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="240" width="140" height="140" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

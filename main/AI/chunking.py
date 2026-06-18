@@ -1,7 +1,7 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from documents import documents
-
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+import warnings
+warnings.filterwarnings("ignore")
 
 def chunking_docs(text):
     if text:

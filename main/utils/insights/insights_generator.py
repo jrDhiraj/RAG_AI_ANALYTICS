@@ -4,23 +4,6 @@ def generate_insights(df, X , y, target_col, cat_result, num_result):
 
     insights = []
 
-    insights.append(
-        f"The dataset contains {df.shape[0]} rows and {df.shape[1]} columns."
-        f"The target variable is '{target_col}' ."
-    )
-
-    insights.append(
-        f"Sample data : \n {df.head(5).to_string()} ."
-    )
-
-    insights.append(
-        f"the Data description is {df.describe()} ."
-    )
-
-    insights.append(
-        f"the Data description of categorical features is '{df.describe(include=['object', 'category'])}' ."
-    )
-
 
     for col , p in cat_result:
         if p < 0.05:

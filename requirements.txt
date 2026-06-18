@@ -14,3 +14,6 @@ torchvision
 google-generativeai
 langchain_text_splitters
 langchain_community
+streamlit[pdf]
+fpdf2
+statsmodels

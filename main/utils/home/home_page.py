@@ -3,28 +3,46 @@ import streamlit as st
 import pandas as pd
 from  load_df import load_df
 import io
-from documents import documents
 
-with st.expander("See data description"):
+documents = {}
+
+st.set_page_config(layout="wide")
+with st.expander("See data description", True):
 
     def dataset_description(df):
-        st.write("Dataframe shape")
-        df_shape = df.shape
-        st.write(df_shape)
-        st.space()
+        
+        st.write("remove coluns from here")
+        all_columns = df.columns.tolist()
+        
+        selected_col = st.multiselect("select col you want to keep", all_columns, default=all_columns)
 
+        if selected_col:
+            st.dataframe(df[selected_col])
+            df = df[selected_col]
+
+            st.session_state.df = df
+
+        else:
+            st.warning("Please select at least one column to display.")
+
+
+        df_shape = df.shape
 
         st.write("Dataframe Description")
-        df_description = df.describe()
-        documents['df_description'] = df_description
-        st.dataframe(df_description, width="stretch")
+        numes = df.select_dtypes(include=["number"])
+
+        if not numes.empty:
+            st.write(numes.shape)
+            st.write(numes.columns.tolist())
+            df_description = numes.describe()
+            documents['df_description'] = df_description
+            st.dataframe(df_description, width="stretch")
         
        
         catg = df.select_dtypes(include=["object", "category"])
         if not catg.empty:
             st.divider()
             st.write("Categorical Description")
-            
             categorical_description = catg.describe()
             documents['categorical_description'] = categorical_description
             st.dataframe(categorical_description, width="stretch")
@@ -40,9 +58,10 @@ with st.expander("See data description"):
 
         st.write("is null")
         df_isnull = df.isnull().sum()
-        documents['df_isnull'] = df_isnull
-        st.write(df_isnull)
-        st.space()
+        null_row = df_isnull[df_isnull > 0]
+        documents['null_row'] = null_row
+        st.dataframe(null_row)
+        
 
         st.write("Dataframe duplicate")
         df_isduplicats = df.duplicated().sum()
@@ -50,8 +69,9 @@ with st.expander("See data description"):
         st.write(df_isduplicats)
         st.space()
 
-        return df_shape,df_description,categorical_description,info_str,df_isnull,df_isduplicats
-
+        if "data_insights" not in st.session_state:
+            st.session_state.data_insights = {}
+            st.session_state.data_insights["dataset_summary"] = documents
 
     df = load_df()
 

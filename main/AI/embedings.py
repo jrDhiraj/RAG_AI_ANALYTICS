@@ -1,6 +1,7 @@
 from main.AI.chunking import chunking_docs
 from langchain_huggingface import HuggingFaceEmbeddings
-
+import warnings
+warnings.filterwarnings("ignore")
 
 from langchain_huggingface import HuggingFaceEmbeddings
 

@@ -5,55 +5,109 @@ from main.AI.vector_db import create_vector_db
 from main.AI.llm_model import model_llm
 
 st.set_page_config(layout="wide")
+def collect_all_insights():
+
+    knowledge = []
+
+    if "data_insights" in st.session_state:
+        knowledge.append(
+            str(st.session_state.data_insights)
+        )
+
+    if "chart_summary" in st.session_state:
+        knowledge.append(
+            str(st.session_state.chart_summary)
+        )
+
+    if "statistical_summary" in st.session_state:
+        knowledge.append(
+            str(st.session_state.statistical_summary)
+        )
+
+    if len(documents) > 0:
+        knowledge.append(
+            str(documents)
+        )
+    
+    return knowledge
+
+def build_vector_db():
+
+    knowledge = collect_all_insights()
+
+    chunks = []
+
+    for text in knowledge:
+
+        chunks.extend(
+            chunking_docs(text)
+        )
+
+    if len(chunks) == 0:
+
+        st.error(
+            "No analysis available"
+        )
+
+        return
+
+    st.session_state.vector_db = (
+        create_vector_db(chunks)
+    )
+
+    st.success(
+        f"Knowledge Base Created ({len(chunks)} chunks)"
+    )
+
 
 def aiui():
-    st.title("AI Data Assistant")
 
-    query = st.chat_input("Ask something...")
+    st.title("Dataset AI Assistant")
+
+    if st.button(
+        "Build Knowledge Base"
+    ):
+
+        build_vector_db()
+
+    query = st.chat_input(
+        "Ask about dataset..."
+    )
+
+    if not query:
+        return
 
     if "db" not in st.session_state:
-        st.session_state.db = None
 
-    if st.session_state.db is None:
+        st.warning(
+            "Build Knowledge Base First"
+        )
 
-        if isinstance(documents, dict):
-            texts = [str(v) for v in documents.values()]
-        elif isinstance(documents, list):
-            texts = documents
-        else:
-            texts = [str(documents)]
+        return
 
-        # chunking
-        chunks = []
-        for t in texts:
-            chunks.extend(chunking_docs(str(t)))
+    docs = (
+        st.session_state.vector_db
+        .similarity_search(
+            query,
+            k=10
+        )
+    )
 
-        st.write("Total chunks created:", len(chunks))
+    context = "\n".join(
+        [
+            d.page_content
+            for d in docs
+        ]
+    )
 
-        if len(chunks) == 0:
-            st.error(" No data available to create vector DB")
-            return
+    answer = model_llm(
+        query,
+        context
+    )
 
-        st.session_state.db = create_vector_db(chunks)
-        st.success(" Vector DB created")
-
-    if query and st.session_state.db:
-
-        st.write(" Searching...")
-
-        docs = st.session_state.db.similarity_search(query, k=3)
-
-        if not docs:
-            st.warning("No relevant data found")
-            return
-
-        # LLM answer
-        st.write(" Generating Answer...")
-
-        answer = model_llm(query, docs)
-
-        st.subheader("Answer:")
-        st.write(answer)
+    st.chat_message(
+        "AI"
+    ).write(answer)
 
 
 aiui()

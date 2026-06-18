@@ -1,6 +1,8 @@
 from langchain_community.vectorstores import FAISS
 from main.AI.embedings import load_embedding_model
 from main.AI.chunking import chunking_docs
+import warnings
+warnings.filterwarnings("ignore") 
 
 def create_vector_db(chunks):
     if not chunks:
