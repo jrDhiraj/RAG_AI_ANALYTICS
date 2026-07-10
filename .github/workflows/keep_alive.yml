@@ -2,7 +2,7 @@ name: Keep Streamlit Alive
 
 on:
   schedule:
-    - cron: '17 */8 * * *'
+    - cron: "17 */10 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping Streamlit App
+      - name: Visit Streamlit
         run: |
-          curl -L https://ragaianalytics-3kjywchqr2u4xgjbmxxdnn.streamlit.app/
+          python -c "
+          import urllib.request
+          urllib.request.urlopen('https://ragaianalytics-3kjywchqr2u4xgjbmxxdnn.streamlit.app/')
+          print('Success')
+          "
